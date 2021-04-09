@@ -26,7 +26,7 @@ function show_eyes () {
     strip.show()
 }
 input.onButtonPressed(Button.A, function () {
-    show_nose()
+    show_omg()
 })
 function show_smile () {
     for (let index2 = 0; index2 <= smile.length - 1; index2++) {
@@ -97,6 +97,3 @@ init()
 strip.setBrightness(32)
 strip.clear()
 strip.show()
-basic.forever(function () {
-	
-})

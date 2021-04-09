@@ -1,3 +1,12 @@
+function show_frown () {
+    for (let index2 = 0; index2 <= frown.length - 1; index2++) {
+        strip.setPixelColor(frown[index2], neopixel.colors(NeoPixelColors.Violet))
+        strip.show()
+    }
+    basic.pause(200)
+    strip.clear()
+    strip.show()
+}
 function show_eyes () {
     for (let index = 0; index <= botheyes.length - 1; index++) {
         strip.setPixelColor(botheyes[index], neopixel.colors(NeoPixelColors.Green))
@@ -11,11 +20,11 @@ input.onButtonPressed(Button.A, function () {
     show_nose()
 })
 function show_smile () {
-    for (let index = 0; index <= smile.length - 1; index++) {
-        strip.setPixelColor(smile[index], neopixel.colors(NeoPixelColors.Violet))
+    for (let index2 = 0; index2 <= smile.length - 1; index2++) {
+        strip.setPixelColor(smile[index2], neopixel.colors(NeoPixelColors.Violet))
         strip.show()
     }
-    basic.pause(100)
+    basic.pause(200)
     strip.clear()
     strip.show()
 }
@@ -54,12 +63,12 @@ function show_nose () {
     strip.clear()
     strip.show()
 }
-let frown: number[] = []
 let righteye = 0
 let lefteye = 0
 let nose = 0
 let smile: number[] = []
 let botheyes: number[] = []
+let frown: number[] = []
 let strip: neopixel.Strip = null
 strip = neopixel.create(DigitalPin.P0, 17, NeoPixelMode.RGB)
 init()

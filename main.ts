@@ -73,7 +73,6 @@ function init () {
     8,
     9
     ]
-    music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once)
 }
 input.onButtonPressed(Button.AB, function () {
     show_frown()
@@ -98,8 +97,9 @@ let omg: number[] = []
 let strip: neopixel.Strip = null
 music.setBuiltInSpeakerEnabled(true)
 music.setVolume(208)
+music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.OnceInBackground)
 strip = neopixel.create(DigitalPin.P0, 17, NeoPixelMode.RGB)
-init()
 strip.setBrightness(32)
 strip.clear()
 strip.show()
+init()

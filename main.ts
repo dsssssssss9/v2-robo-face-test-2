@@ -6,6 +6,7 @@ function show_omg () {
     basic.pause(1000)
     strip.clear()
     strip.show()
+    soundExpression.mysterious.play()
 }
 function show_frown () {
     for (let index2 = 0; index2 <= frown.length - 1; index2++) {
@@ -15,6 +16,7 @@ function show_frown () {
     basic.pause(500)
     strip.clear()
     strip.show()
+    soundExpression.sad.play()
 }
 function show_eyes () {
     for (let index = 0; index <= botheyes.length - 1; index++) {
@@ -26,7 +28,7 @@ function show_eyes () {
     strip.show()
 }
 input.onButtonPressed(Button.A, function () {
-    show_omg()
+    show_smile()
 })
 function show_smile () {
     for (let index2 = 0; index2 <= smile.length - 1; index2++) {
@@ -36,6 +38,7 @@ function show_smile () {
     basic.pause(500)
     strip.clear()
     strip.show()
+    soundExpression.giggle.play()
 }
 function init () {
     nose = 14
@@ -70,6 +73,7 @@ function init () {
     8,
     9
     ]
+    music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.OnceInBackground)
 }
 input.onButtonPressed(Button.AB, function () {
     show_frown()
@@ -92,6 +96,8 @@ let botheyes: number[] = []
 let frown: number[] = []
 let omg: number[] = []
 let strip: neopixel.Strip = null
+music.setBuiltInSpeakerEnabled(true)
+music.setVolume(208)
 strip = neopixel.create(DigitalPin.P0, 17, NeoPixelMode.RGB)
 init()
 strip.setBrightness(32)

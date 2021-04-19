@@ -73,7 +73,7 @@ function init () {
     8,
     9
     ]
-    music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.OnceInBackground)
+    music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once)
 }
 input.onButtonPressed(Button.AB, function () {
     show_frown()

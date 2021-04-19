@@ -9,6 +9,7 @@ function show_omg () {
     soundExpression.mysterious.play()
 }
 function show_frown () {
+    soundExpression.sad.play()
     for (let index2 = 0; index2 <= frown.length - 1; index2++) {
         strip.setPixelColor(frown[index2], neopixel.colors(NeoPixelColors.Violet))
         strip.show()
@@ -16,7 +17,6 @@ function show_frown () {
     basic.pause(500)
     strip.clear()
     strip.show()
-    soundExpression.sad.play()
 }
 function show_eyes () {
     for (let index = 0; index <= botheyes.length - 1; index++) {

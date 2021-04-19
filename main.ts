@@ -31,6 +31,7 @@ input.onButtonPressed(Button.A, function () {
     show_smile()
 })
 function show_smile () {
+    soundExpression.giggle.play()
     for (let index2 = 0; index2 <= smile.length - 1; index2++) {
         strip.setPixelColor(smile[index2], neopixel.colors(NeoPixelColors.Violet))
         strip.show()
@@ -38,7 +39,6 @@ function show_smile () {
     basic.pause(500)
     strip.clear()
     strip.show()
-    soundExpression.giggle.play()
 }
 function init () {
     nose = 14

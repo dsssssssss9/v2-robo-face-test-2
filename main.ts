@@ -98,7 +98,7 @@ let strip: neopixel.Strip = null
 music.setBuiltInSpeakerEnabled(true)
 music.setVolume(208)
 music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.OnceInBackground)
-strip = neopixel.create(DigitalPin.P0, 17, NeoPixelMode.RGB)
+strip = neopixel.create(DigitalPin.P1, 17, NeoPixelMode.RGB)
 strip.setBrightness(32)
 strip.clear()
 strip.show()

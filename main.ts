@@ -11,7 +11,7 @@ function show_omg () {
 function show_frown () {
     soundExpression.sad.play()
     for (let index2 = 0; index2 <= frown.length - 1; index2++) {
-        strip.setPixelColor(frown[index2], neopixel.colors(NeoPixelColors.Violet))
+        strip.setPixelColor(frown[index2], neopixel.colors(NeoPixelColors.Green))
         strip.show()
     }
     basic.pause(500)
@@ -20,10 +20,10 @@ function show_frown () {
 }
 function show_eyes () {
     for (let index = 0; index <= botheyes.length - 1; index++) {
-        strip.setPixelColor(botheyes[index], neopixel.colors(NeoPixelColors.Green))
+        strip.setPixelColor(botheyes[index], neopixel.colors(NeoPixelColors.Red))
         strip.show()
     }
-    basic.pause(100)
+    basic.pause(200)
     strip.clear()
     strip.show()
 }
@@ -78,7 +78,10 @@ input.onButtonPressed(Button.AB, function () {
     show_frown()
 })
 input.onButtonPressed(Button.B, function () {
-    show_eyes()
+    for (let index = 0; index < 4; index++) {
+        show_eyes()
+        basic.pause(100)
+    }
 })
 function show_nose () {
     strip.setPixelColor(nose, neopixel.colors(NeoPixelColors.Red))

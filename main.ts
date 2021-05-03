@@ -78,7 +78,7 @@ input.onButtonPressed(Button.AB, function () {
     show_frown()
 })
 input.onButtonPressed(Button.B, function () {
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < 6; index++) {
         show_eyes()
         basic.pause(100)
     }

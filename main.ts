@@ -78,10 +78,12 @@ input.onButtonPressed(Button.AB, function () {
     show_frown()
 })
 input.onButtonPressed(Button.B, function () {
+    strip.setBrightness(255)
     for (let index = 0; index < 6; index++) {
         show_eyes()
         basic.pause(100)
     }
+    strip.setBrightness(32)
 })
 function show_nose () {
     strip.setPixelColor(nose, neopixel.colors(NeoPixelColors.Red))

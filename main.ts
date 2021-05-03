@@ -23,7 +23,7 @@ function show_eyes () {
         strip.setPixelColor(botheyes[index], neopixel.colors(NeoPixelColors.Red))
         strip.show()
     }
-    basic.pause(200)
+    basic.pause(100)
     strip.clear()
     strip.show()
 }
